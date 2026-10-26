@@ -91,6 +91,11 @@ ul.check li::before { content: ""; position: absolute; left: 0; top: .55em; widt
 .why b { display: block; font-size: 2rem; font-weight: 800; line-height: 1.1; }
 .why span { color: var(--muted); }
 
+/* Our photos */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+@media (max-width: 760px) { .gallery { gap: 4px; } }
+
 /* Contact */
 .contact { background: var(--red); color: var(--white); }
 .contact .label { color: var(--white); opacity: .8; }
@@ -253,6 +258,24 @@ footer { padding-block: 24px; color: var(--muted); font-size: .8rem; }
       <div><b>#10</b><span>business school in Europe, Financial Times 2025</span></div>
       <div><b>Triple</b><span>accreditation: AACSB, EQUIS, AMBA</span></div>
       <div><b>52,000</b><span>graduates in 130 countries</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label">Our Lyon</div>
+    <h2>Photos from our daily life</h2>
+    <div class="gallery">
+      <img src="img/lyon-1.jpg" alt="Street in Lyon" loading="lazy">
+      <img src="img/lyon-2.jpg" alt="Street in Lyon" loading="lazy">
+      <img src="img/lyon-3.jpg" alt="Street in Lyon" loading="lazy">
+      <img src="img/lyon-4.jpg" alt="Street in Lyon" loading="lazy">
+      <img src="img/lyon-5.jpg" alt="Street in Lyon" loading="lazy">
+      <img src="img/lyon-6.jpg" alt="Street in Lyon" loading="lazy">
+      <img src="img/lyon-7.jpg" alt="Street in Lyon" loading="lazy">
+      <img src="img/lyon-8.jpg" alt="Street in Lyon" loading="lazy">
+      <img src="img/lyon-9.jpg" alt="Street in Lyon" loading="lazy">
     </div>
   </div>
 </section>
