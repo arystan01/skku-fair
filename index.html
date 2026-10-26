@@ -104,6 +104,19 @@ ul.check li::before { content: ""; position: absolute; left: 0; top: .55em; widt
 .btn { display: inline-block; margin-top: 22px; background: var(--white); color: var(--red); font-weight: 700; text-decoration: none; padding: 14px 22px; }
 .btn:hover { background: var(--ink); color: var(--white); }
 
+.mail a { text-decoration: none; }
+.mail a:hover { text-decoration: underline; }
+
+/* Links */
+.links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.links > div { min-width: 0; }
+.links ul { list-style: none; margin: 0; padding: 0; border-top: 4px solid var(--red); }
+.links li a { display: flex; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); text-decoration: none; font-weight: 500; }
+.links li a::after { content: "→"; color: var(--red); font-weight: 700; }
+.links li a[download]::after { content: "↓"; }
+.links li a:hover { color: var(--red); }
+.links li small { color: var(--muted); font-weight: 400; }
+
 footer { padding-block: 24px; color: var(--muted); font-size: .8rem; }
 
 @media (max-width: 760px) {
@@ -115,7 +128,7 @@ footer { padding-block: 24px; color: var(--muted); font-size: .8rem; }
   .fact b { font-size: 1.35rem; }
   body { overflow-x: hidden; }
   .fact:nth-child(2n) { border-right: 0; }
-  .two, .dates, .packs, .campuses, .lyon, .why { grid-template-columns: 1fr; }
+  .two, .dates, .packs, .campuses, .lyon, .why, .links { grid-template-columns: 1fr; }
   .two { gap: 36px; }
   .packs { gap: 32px; }
   .lyon img { min-height: 240px; }
@@ -287,8 +300,44 @@ footer { padding-block: 24px; color: var(--muted); font-size: .8rem; }
   <div class="wrap">
     <div class="label">Questions</div>
     <h2>Email the exchange team</h2>
-    <div class="mail">incoming.globalbba@em-lyon.com</div>
+    <div class="mail"><a href="mailto:incoming.globalbba@em-lyon.com">incoming.globalbba@em-lyon.com</a></div>
     <a class="btn" href="https://masters.em-lyon.com/en/bsc-data-science-responsible-business" target="_blank" rel="noopener">Official program page</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label">More info</div>
+    <h2>Brochures and links</h2>
+    <div class="links">
+      <div>
+        <h3>Download</h3>
+        <ul>
+          <li><a href="files/bsc-data-science-factsheet-2026-27.pdf" download>Factsheet BSc Data Science <small>PDF</small></a></li>
+          <li><a href="files/bsc-course-catalogue-2026-27.pdf" download>Course catalogue 2026–27 <small>PDF</small></a></li>
+          <li><a href="files/bsc-brochure.pdf" download>BSc brochure <small>PDF</small></a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>emlyon business school</h3>
+        <ul>
+          <li><a href="https://em-lyon.com/en/international-experience/incoming-students" target="_blank" rel="noopener">Exchange students</a></li>
+          <li><a href="https://www.instagram.com/emlyonbschool" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/school/em-lyon-business-school/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@emlyon" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.tiktok.com/@emlyonbschool" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Centrale Lyon</h3>
+        <ul>
+          <li><a href="https://www.ec-lyon.fr/international/mobilites-entrantes/etudier-centrale-lyon-les-echanges-academiques" target="_blank" rel="noopener">Exchange students</a></li>
+          <li><a href="https://www.instagram.com/centralelyon" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/school/centrale-lyon/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@ecolecentralelyon" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
