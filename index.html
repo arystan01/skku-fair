@@ -104,6 +104,11 @@ ul.check li::before { content: ""; position: absolute; left: 0; top: .55em; widt
 .btn { display: inline-block; margin-top: 22px; background: var(--white); color: var(--red); font-weight: 700; text-decoration: none; padding: 14px 22px; }
 .btn:hover { background: var(--ink); color: var(--white); }
 
+.contact .wrap { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+.contact .wrap > div { min-width: 0; }
+.qr { margin: 0; text-align: center; font-size: .85rem; }
+.qr img { display: block; width: 180px; height: 180px; background: var(--white); padding: 8px; margin-bottom: 8px; }
+
 .mail a { text-decoration: none; }
 .mail a:hover { text-decoration: underline; }
 
@@ -115,7 +120,7 @@ ul.check li::before { content: ""; position: absolute; left: 0; top: .55em; widt
 .links li a::after { content: "→"; color: var(--red); font-weight: 700; }
 .links li a[download]::after { content: "↓"; }
 .links li a:hover { color: var(--red); }
-.links li small { color: var(--muted); font-weight: 400; }
+.links li small { color: var(--muted); font-weight: 400; margin-left: auto; }
 
 footer { padding-block: 24px; color: var(--muted); font-size: .8rem; }
 
@@ -133,6 +138,7 @@ footer { padding-block: 24px; color: var(--muted); font-size: .8rem; }
   .packs { gap: 32px; }
   .lyon img { min-height: 240px; }
   .lyon-text { padding: 28px 20px; }
+  .contact .wrap { flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
@@ -298,10 +304,16 @@ footer { padding-block: 24px; color: var(--muted); font-size: .8rem; }
 
 <section class="contact">
   <div class="wrap">
-    <div class="label">Questions</div>
-    <h2>Email the exchange team</h2>
-    <div class="mail"><a href="mailto:incoming.globalbba@em-lyon.com">incoming.globalbba@em-lyon.com</a></div>
-    <a class="btn" href="https://masters.em-lyon.com/en/bsc-data-science-responsible-business" target="_blank" rel="noopener">Official program page</a>
+    <div>
+      <div class="label">Questions</div>
+      <h2>Email the exchange team</h2>
+      <div class="mail"><a href="mailto:incoming.globalbba@em-lyon.com">incoming.globalbba@em-lyon.com</a></div>
+      <a class="btn" href="https://masters.em-lyon.com/en/bsc-data-science-responsible-business" target="_blank" rel="noopener">Official program page</a>
+    </div>
+    <figure class="qr">
+      <img src="img/qr.png" alt="QR code for this page">
+      <figcaption>Scan to open on your phone</figcaption>
+    </figure>
   </div>
 </section>
 
