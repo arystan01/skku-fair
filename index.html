@@ -30,7 +30,7 @@ h2 { font-size: clamp(1.9rem, 5vw, 2.6rem); margin-bottom: 24px; }
 
 /* Hero */
 .hero { position: relative; min-height: 560px; display: flex; align-items: flex-end; background: #333 url(img/hero-atrium.jpg) center/cover no-repeat; }
-.hero .wrap { width: 100%; padding-bottom: 32px; }
+.hero .wrap { width: 100%; padding-bottom: 32px; display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; }
 .hero-box { background: var(--red); color: var(--white); padding: 28px; max-width: 520px; }
 .hero-box h1 { font-size: clamp(2.4rem, 7vw, 3.6rem); }
 .hero-box p { margin: 14px 0 0; font-size: 1.05rem; font-weight: 500; }
@@ -104,10 +104,8 @@ ul.check li::before { content: ""; position: absolute; left: 0; top: .55em; widt
 .btn { display: inline-block; margin-top: 22px; background: var(--white); color: var(--red); font-weight: 700; text-decoration: none; padding: 14px 22px; }
 .btn:hover { background: var(--ink); color: var(--white); }
 
-.contact .wrap { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
-.contact .wrap > div { min-width: 0; }
-.qr { margin: 0; text-align: center; font-size: .85rem; }
-.qr img { display: block; width: 180px; height: 180px; background: var(--white); padding: 8px; margin-bottom: 8px; }
+.qr { margin: 0; background: var(--white); padding: 12px; text-align: center; font-size: .9rem; font-weight: 600; flex-shrink: 0; }
+.qr img { display: block; width: 240px; height: 240px; margin-bottom: 8px; }
 
 .mail a { text-decoration: none; }
 .mail a:hover { text-decoration: underline; }
@@ -138,7 +136,7 @@ footer { padding-block: 24px; color: var(--muted); font-size: .8rem; }
   .packs { gap: 32px; }
   .lyon img { min-height: 240px; }
   .lyon-text { padding: 28px 20px; }
-  .contact .wrap { flex-direction: column; align-items: flex-start; }
+  .hero .qr { display: none; }
 }
 </style>
 </head>
@@ -151,6 +149,10 @@ footer { padding-block: 24px; color: var(--muted); font-size: .8rem; }
       <p>BSc in Data Science for Responsible Business</p>
       <small>emlyon business school &amp; Centrale Lyon</small>
     </div>
+    <figure class="qr">
+      <img src="img/qr.png" alt="QR code for this page">
+      <figcaption>Scan to open on your phone</figcaption>
+    </figure>
   </div>
 </header>
 
@@ -304,16 +306,10 @@ footer { padding-block: 24px; color: var(--muted); font-size: .8rem; }
 
 <section class="contact">
   <div class="wrap">
-    <div>
-      <div class="label">Questions</div>
-      <h2>Email the exchange team</h2>
-      <div class="mail"><a href="mailto:incoming.globalbba@em-lyon.com">incoming.globalbba@em-lyon.com</a></div>
-      <a class="btn" href="https://masters.em-lyon.com/en/bsc-data-science-responsible-business" target="_blank" rel="noopener">Official program page</a>
-    </div>
-    <figure class="qr">
-      <img src="img/qr.png" alt="QR code for this page">
-      <figcaption>Scan to open on your phone</figcaption>
-    </figure>
+    <div class="label">Questions</div>
+    <h2>Email the exchange team</h2>
+    <div class="mail"><a href="mailto:incoming.globalbba@em-lyon.com">incoming.globalbba@em-lyon.com</a></div>
+    <a class="btn" href="https://masters.em-lyon.com/en/bsc-data-science-responsible-business" target="_blank" rel="noopener">Official program page</a>
   </div>
 </section>
 
